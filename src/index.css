@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap'); /* Fallback */
+
+/* Cartapani Font (Self-host) */
+@font-face {
+  font-family: 'Cartapani';
+  src: url('/fonts/Cartapani-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aurora-green: #00ff88;
+  --aurora-purple: #aa00ff;
+  --aurora-pink: #ff00aa;
+  --aurora-blue: #0088ff;
+  --aurora-yellow: #ffcc00;
+}
+
+body {
+  font-family: 'Cartapani', 'Playfair Display', serif;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+.aurora-glow {
+  filter: drop-shadow(0 0 10px var(--aurora-green)) 
+          drop-shadow(0 0 20px var(--aurora-purple));
+  transition: filter 0.3s ease;
+}
+
+.light .aurora-glow {
+  filter: drop-shadow(0 0 10px #00ff88) 
+          drop-shadow(0 0 20px #ffcc00);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-playful {
+  letter-spacing: 0.05em;
+  transition: letter-spacing 0.3s ease;
+}
+.text-playful:hover {
+  letter-spacing: 0.1em;
+}
+
+.zoom-section {
+  transform-origin: center center;
+}
