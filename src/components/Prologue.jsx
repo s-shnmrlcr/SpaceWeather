@@ -8,7 +8,7 @@ const Prologue = () => {
       image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" 
       bgOverlay="linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5))"
     >
-      <div className="space-y-10 text-center" style={{ fontFamily: 'Georgia, serif' }}>
+      <div className="space-y-10 text-center" style={{ fontFamily: 'Audiowide' }}>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

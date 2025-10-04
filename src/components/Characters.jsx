@@ -5,7 +5,7 @@ import StorySection from './StorySection';
 const Characters = () => {
   return (
     <StorySection image="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=1920&q=80">
-      <div className="space-y-8 text-center" style={{ fontFamily: 'Georgia, serif' }}>
+      <div className="space-y-8 text-center" style={{ fontFamily: 'Audiowide' }}>
         <motion.h3
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

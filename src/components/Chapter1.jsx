@@ -5,7 +5,7 @@ import StorySection from './StorySection';
 const Chapter1 = () => {
   return (
     <StorySection video="https://www.youtube.com/embed/czW6VNUpP30">
-      <div className="space-y-8 text-center" style={{ fontFamily: 'Georgia, serif' }}>
+      <div className="space-y-8 text-center" style={{ fontFamily: 'Audiowide' }}>
         <motion.h3 
           initial={{ opacity: 0 }} 
           whileInView={{ opacity: 1 }} 

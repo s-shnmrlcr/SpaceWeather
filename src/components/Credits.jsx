@@ -16,7 +16,7 @@ const Credits = () => {
         whileInView={{ opacity: 1 }} 
         transition={{ duration: 2 }} 
         className="text-center space-y-8 relative z-10 px-6" 
-        style={{ fontFamily: 'Georgia, serif' }}
+        style={{ fontFamily: 'Audiowide' }}
       >
         <p className="text-3xl md:text-4xl font-light text-gray-300">The End</p>
         <p className="text-xl text-gray-400 italic">Thank you for witnessing this journey</p>

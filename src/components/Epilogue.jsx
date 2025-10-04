@@ -5,7 +5,7 @@ import StorySection from './StorySection';
 const Epilogue = () => {
   return (
     <StorySection image="https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=1920&q=80">
-      <div className="space-y-8 text-center" style={{ fontFamily: 'Georgia, serif' }}>
+      <div className="space-y-8 text-center" style={{ fontFamily: 'Audiowide' }}>
         <motion.h3 
           initial={{ opacity: 0 }} 
           whileInView={{ opacity: 1 }} 

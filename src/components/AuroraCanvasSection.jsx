@@ -23,7 +23,7 @@ const AuroraCanvasSection = () => {
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 1.2 }} 
         className="text-5xl sm:text-6xl md:text-7xl font-light tracking-wide mb-8 text-center relative z-10" 
-        style={{ fontFamily: 'Georgia, serif', textShadow: '0 0 30px rgba(168, 85, 247, 0.5)' }}
+        style={{ fontFamily: 'Audiowide', textShadow: '0 0 30px rgba(168, 85, 247, 0.5)' }}
       >
         Create Your Aurora
       </motion.h2>
@@ -32,7 +32,7 @@ const AuroraCanvasSection = () => {
         whileInView={{ opacity: 1 }} 
         transition={{ duration: 1.2, delay: 0.3 }} 
         className="text-lg sm:text-2xl text-purple-200 mb-16 text-center max-w-3xl italic leading-relaxed relative z-10" 
-        style={{ fontFamily: 'Georgia, serif' }}
+        style={{ fontFamily: 'Audiowide' }}
       >
         Paint your own celestial dance across the night sky
       </motion.p>
