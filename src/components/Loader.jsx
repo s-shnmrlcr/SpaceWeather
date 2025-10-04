@@ -55,10 +55,10 @@ const Loader = ({ onComplete }) => {
           transition={{ duration: 1 }}
           className="mb-12"
         >
-          <div className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
+          <div className="text-white text-3xl md:text-4xl font-light mb-3 tracking-wide" style={{ fontFamily: 'Audiowide' }}>
             Through an Astronaut's Eyes
           </div>
-          <div className="text-purple-300 text-sm tracking-widest uppercase">Loading Experience</div>
+          <div className="text-purple-300 text-sm tracking-widest uppercase" style={{fontFamily: 'Concert One'}}>Loading Experience</div>
         </motion.div>
         
         <div className="relative w-80 h-1.5 bg-gray-800 rounded-full mx-auto overflow-hidden">
@@ -72,7 +72,7 @@ const Loader = ({ onComplete }) => {
         <motion.div
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-gray-300 mt-8 text-lg tracking-widest font-light"
+          className="text-gray-300 mt-8 text-lg tracking-widest font-light" style={{fontFamily: 'Concert One'}}
         >
           {progress}%
         </motion.div>
