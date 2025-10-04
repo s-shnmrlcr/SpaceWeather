@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+#sun-svg {
+  min-width: 150px;
+  width: 18%;
+  place-content: center;
+}
+#animation-container {
+  flex: 8;
+  margin: 1rem;
+}
+#text-container {
+  flex: 2;
+  margin: 1rem;
+  color: black;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  text-align: center;
+  position: fixed; 
+  top: 0;
+}
