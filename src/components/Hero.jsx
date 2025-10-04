@@ -1,59 +1,90 @@
-import { motion } from 'framer-motion';
-import { useGSAP } from '@gsap/react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-export default function Hero() {
-  useGSAP(() => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '#hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-      },
-    })
-    .to('h1', { scale: 1.2, ease: 'none' }, 0)
-    .to('.title-text', { letterSpacing: '0.2em', ease: 'none' }, 0);
-  });
+const Hero = () => {
+  const { scrollYProgress } = useScroll();
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
   return (
-    <section id="hero" className="h-screen flex items-center justify-center bg-black relative overflow-hidden">
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-aurora-purple/20 to-aurora-blue"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 20, repeat: Infinity }}
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <motion.div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1920&q=80)',
+          y: backgroundY
+        }}
       />
-
-      <div className="text-center z-10 px-4">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+      
+      <div className="absolute inset-0">
+        {[...Array(30)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-white rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [-20, -100],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+            }}
+          />
+        ))}
+      </div>
+      
+      <div className="relative z-10 text-center px-6">
         <motion.h1
-          className="text-7xl md:text-9xl font-cartapani text-playful mb-8 aurora-glow"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "backOut" }}
-        >
-          Lira
-        </motion.h1>
-        <motion.div
-          className="title-text text-3xl md:text-5xl mb-12"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1, ease: "backOut" }}
+          transition={{ duration: 1.8, delay: 0.3 }}
+          className="text-6xl sm:text-8xl md:text-9xl font-light tracking-wide mb-6 text-white"
+          style={{ fontFamily: 'Georgia, serif', textShadow: '0 0 40px rgba(255,255,255,0.3)' }}
         >
-          the Little Flare Who Painted the Sky
-        </motion.div>
-        <motion.button
-          className="px-8 py-4 bg-aurora-purple text-white rounded-full text-xl font-cartapani hover:bg-aurora-pink transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          Through an
+        </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.8, delay: 0.7 }}
+          className="text-5xl sm:text-7xl md:text-8xl font-light tracking-wide text-white mb-12"
+          style={{ fontFamily: 'Georgia, serif', textShadow: '0 0 40px rgba(255,255,255,0.3)' }}
+        >
+          Astronaut's Eyes
+        </motion.h2>
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          aria-label="Start journey"
+          transition={{ duration: 2, delay: 1.2 }}
+          className="text-2xl sm:text-3xl text-blue-200 italic max-w-3xl mx-auto leading-relaxed"
+          style={{ fontFamily: 'Georgia, serif' }}
         >
-          Start Journey ✨
-        </motion.button>
+          A story of storms, shields, and wonder from the edge of space
+        </motion.p>
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 1.8 }}
+          className="mt-24"
+        >
+          <motion.div
+            animate={{ y: [0, 15, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-gray-300 text-sm tracking-widest flex flex-col items-center gap-2"
+          >
+            <span className="text-lg">↓</span>
+            <span>Scroll to begin the journey</span>
+          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Hero;
