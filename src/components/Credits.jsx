@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import AuroraTrail from './AuroraTrail';
 
 const Credits = () => {
   return (
@@ -11,6 +12,9 @@ const Credits = () => {
           filter: 'brightness(0.3)' 
         }} 
       />
+      {/*Add AuroraTrail component */}
+      <AuroraTrail />
+      
       <motion.div 
         initial={{ opacity: 0 }} 
         whileInView={{ opacity: 1 }} 
