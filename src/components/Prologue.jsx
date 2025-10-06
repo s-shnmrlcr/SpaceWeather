@@ -43,7 +43,7 @@ const Prologue = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-2xl md:text-4xl font-light leading-relaxed text-pink-300 italic pt-6"
         >
-          I am Commander Aria Vega. From up here the world speaks differently.
+          I am Lira. From up here the world speaks differently.
         </motion.p>
       </div>
     </StorySection>
