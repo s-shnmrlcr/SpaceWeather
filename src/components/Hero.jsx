@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import AuroraTrail from './AuroraTrail';
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
@@ -38,6 +39,9 @@ const Hero = () => {
         ))}
       </div>
       
+      {/*Add the AuroraTrail component here */}
+      <AuroraTrail />
+      
       <div className="relative z-10 text-center px-6">
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
@@ -46,7 +50,7 @@ const Hero = () => {
           className="text-6xl sm:text-8xl md:text-9xl font-light tracking-wide mb-6 text-white"
           style={{ fontFamily: 'Audiowide', textShadow: '0 0 40px rgba(255,255,255,0.3)' }}
         >
-          Through an
+          THROUGH AN
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
@@ -55,7 +59,7 @@ const Hero = () => {
           className="text-5xl sm:text-7xl md:text-8xl font-light tracking-wide text-white mb-12"
           style={{ fontFamily: 'Audiowide', textShadow: '0 0 40px rgba(255,255,255,0.3)' }}
         >
-          Astronaut's Eyes
+          ASTRONAUT'S EYES
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
