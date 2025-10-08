@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Through-the-Astronauts-Eyes-/', 
+  base: '/take-flight/', 
   plugins: [
     react(), 
   ],
