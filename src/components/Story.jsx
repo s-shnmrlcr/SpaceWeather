@@ -4,7 +4,7 @@ import StorySection from './StorySection';
 
 const Story = () => {
   return (
-    <StorySection 
+    <StorySection
       bgOverlay="linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5))"
     >
       <div className="space-y-10 text-center" style={{ fontFamily: 'Audiowide' }}>
@@ -18,17 +18,26 @@ const Story = () => {
           This is the story of one storm, told from the window of orbit.
         </motion.p>
 
-        {/* ✅ Embedded Website Section */}
+        {/* ✅ Fullscreen Responsive Embedded Website */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.6 }}
           className="w-full flex justify-center"
+          style={{ position: 'relative', width: '100%', height: '100vh' }} // Full viewport
         >
           <iframe
             src="https://s-shnmrlcr.github.io/sandbox1337/"
             title="Aurora Sandbox"
-            className="w-full md:w-4/5 h-[500px] md:h-[700px] rounded-2xl shadow-lg border border-purple-300"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              borderRadius: '0', // optional
+            }}
             allowFullScreen
           />
         </motion.div>
