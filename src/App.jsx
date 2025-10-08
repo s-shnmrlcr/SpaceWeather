@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Loader from './components/Loader';
 import Hero from './components/Hero';
 import Prologue from './components/Prologue';
+import Story from './components/Story';
 import AuroraCanvasSection from './components/AuroraCanvasSection';
 import Epilogue from './components/Epilogue';
 import Credits from './components/Credits';
@@ -22,6 +23,7 @@ export default function App() {
           <ScrollProgress />
           <Hero />
           <Prologue />
+          <Story />
           <AuroraCanvasSection />
           <Epilogue />
           <Credits />
