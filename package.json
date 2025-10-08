@@ -15,12 +15,12 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-  "deploy": "git restore index.html && git reset --hard && git clean -fd && gh-pages -d dist"
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "gh-pages": "^6.3.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.0",
     "typescript": "^5.9.3",
