@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const AuroraCanvas = () => {
-  // 🎨 References and states
+  //  References and states
   const canvasRef = useRef(null);            // The canvas (our "drawing paper")
   const [isDrawing, setIsDrawing] = useState(false);  // To check if the user is currently drawing
   const [context, setContext] = useState(null);       // The paintbrush for canvas
@@ -10,7 +10,7 @@ const AuroraCanvas = () => {
   const lastPos = useRef({ x: 0, y: 0 });             // Remember the last mouse position
   const particles = useRef([]);                       // 🌠 Store sparkly "particles" for aurora
 
-  // 🌈 Aurora color palette (you can pick these colors)
+  //  Aurora color palette (you can pick these colors)
   const colors = [
     { name: 'Aurora Green', gradient: ['#00ff88', '#00cc66', '#008844'], shadow: '#00ff88' },
     { name: 'Cosmic Purple', gradient: ['#a855f7', '#7c3aed', '#6d28d9'], shadow: '#a855f7' },
