@@ -1,4 +1,6 @@
-# WEBSITE URL -- https://s-shnmrlcr.github.io/take-flight/
+# MAIN WEBSITE URL -- https://s-shnmrlcr.github.io/take-flight/
+
+## STORY WEBSITE URL -- https://s-shnmrlcr.github.io/sandbox1337/
 
 #  Through the Astronaut’s Eyes  
 **A Stellar Story of Space Weather — through the eyes of Earthlings**  
